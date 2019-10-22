@@ -1,1 +1,1 @@
-# nginx-log-analyzer
+# NginX access log analyzer
