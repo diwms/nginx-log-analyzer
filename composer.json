@@ -3,7 +3,8 @@
     "description": "Analyze/Parse Nginx log using php",
     "homepage": "https://github.com/diwms/nginx-log-analyzer",
     "license": "MIT",
-    "version": "0.0.1",
+    "type": "library",
+    "version": "1.0.0",
     "require": {
         "php": "^7.3",
         "ramsey/collection": "^1.0"
