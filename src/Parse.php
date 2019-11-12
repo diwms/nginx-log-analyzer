@@ -14,7 +14,7 @@ use function count;
 use function preg_match;
 use function trim;
 
-class Parse implements Parsable
+final class Parse implements Parsable
 {
     /** @var Format */
     private $format;
