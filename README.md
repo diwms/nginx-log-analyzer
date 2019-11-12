@@ -52,6 +52,7 @@ Basically, `Parse` require two implementation:
 2. `Pattern` contract. There are `build(Format $format) : string` and `getIdentifiers() : array` methods.
 
 Library already have built-in format support of default nginx access.log format which is:
+
 `$remote_addr - $remote_user [$time_local] "$request" $status $bytes_sent "$http_referer" "$http_user_agent"`
 
 ## License
