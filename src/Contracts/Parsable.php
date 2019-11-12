@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Diwms\NginxLogAnalyzer\Contracts;
 
-interface Format
+interface Parsable
 {
-    public function getStringRepresentation() : string;
+    public function line(string $line) : object;
 }

@@ -9,7 +9,14 @@
         "ramsey/collection": "^1.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^8.4"
+        "doctrine/coding-standard": "^6.0",
+        "phpstan/extension-installer": "^1.0",
+        "phpstan/phpstan": "^0.11.19",
+        "phpstan/phpstan-phpunit": "^0.11.2",
+        "phpunit/phpunit": "^8.4",
+        "roave/security-advisories": "dev-master",
+        "spatie/phpunit-watcher": "^1.21",
+        "vimeo/psalm": "^3.6"
     },
     "autoload": {
         "psr-4": {
@@ -23,5 +30,17 @@
     },
     "config": {
         "sort-packages": true
+    },
+    "scripts": {
+        "psalm": "psalm",
+        "stan": "phpstan analyze src tests",
+        "cs-fix": "phpcbf",
+        "cs-check": "phpcs",
+        "watch": "phpunit-watcher watch",
+        "code-quality": [
+            "@psalm",
+            "@stan",
+            "@cs-check"
+        ]
     }
 }

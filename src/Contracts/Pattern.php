@@ -6,11 +6,10 @@ namespace Diwms\NginxLogAnalyzer\Contracts;
 
 interface Pattern
 {
-    public function build(): string;
+    public function build(Format $format) : string;
 
-    public function validate(): bool;
-
-    public function getIdentifiers(): array;
-
-    public function getFormat(): Format;
+    /**
+     * @return array<string>
+     */
+    public function getIdentifiers() : array;
 }

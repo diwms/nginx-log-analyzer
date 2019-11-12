@@ -3,3 +3,9 @@
 
 composer.lock
 .phpunit.result.cache
+
+# Don't forget to add .phpcs-cache and phpcs.xml (without .dist suffix) to your .gitignore.
+# The first ignored file is a cache used by PHP CodeSniffer to speed things up, the second one allows any developer to
+# adjust configuration locally without touching the versioned file.
+.phpcs-cache
+phpcs.xml

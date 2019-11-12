@@ -6,9 +6,9 @@ namespace Diwms\NginxLogAnalyzer;
 
 use Diwms\NginxLogAnalyzer\Contracts\Format;
 
-final class NginxAccessLog implements Format
+final class NginxAccessLogFormat implements Format
 {
-    public function getStringRepresentation(): string
+    public function getStringRepresentation() : string
     {
         return '$remote_addr - $remote_user [$time_local] "$request" $status $bytes_sent "$http_referer" "$http_user_agent"';
     }
