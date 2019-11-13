@@ -1,8 +1,10 @@
 # nginx-log-analyzer
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/diwms/nginx-log-analyzer.svg?style=flat-square)](https://packagist.org/packages/diwms/nginx-log-analyzer)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 [![Build Status](https://img.shields.io/travis/diwms/nginx-log-analyzer/master.svg?style=flat-square)](https://travis-ci.org/diwms/nginx-log-analyzer)
 [![StyleCI](https://github.styleci.io/repos/216911317/shield?branch=master)](https://github.styleci.io/repos/216911317)
+[![Coverage](https://img.shields.io/coveralls/github/diwms/nginx-log-analyzer?style=flat-square)](https://coveralls.io/github/diwms/nginx-log-analyzer)
 [![Total Downloads](https://img.shields.io/packagist/dt/diwms/nginx-log-analyzer.svg?style=flat-square)](https://packagist.org/packages/diwms/nginx-log-analyzer)
 
 ---
@@ -57,4 +59,4 @@ Library already have built-in format support of default nginx access.log format 
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+The MIT License (MIT). Please see [License File](LICENSE) for more information.

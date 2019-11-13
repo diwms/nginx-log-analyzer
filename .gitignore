@@ -9,3 +9,4 @@ composer.lock
 # adjust configuration locally without touching the versioned file.
 .phpcs-cache
 phpcs.xml
+clover.xml

@@ -6,8 +6,7 @@
     "type": "library",
     "version": "1.0.0",
     "require": {
-        "php": "^7.3",
-        "ramsey/collection": "^1.0"
+        "php": "^7.3"
     },
     "require-dev": {
         "doctrine/coding-standard": "^6.0",
@@ -38,6 +37,8 @@
         "cs-fix": "phpcbf",
         "cs-check": "phpcs",
         "watch": "phpunit-watcher watch",
+        "test": "phpunit --colors=always",
+        "test-coverage": "phpunit --colors=always --coverage-clover clover.xml",
         "code-quality": [
             "@psalm",
             "@stan",
