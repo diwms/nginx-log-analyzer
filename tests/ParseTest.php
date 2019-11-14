@@ -57,8 +57,7 @@ class ParseTest extends TestCase
     {
         $this->expectException(Line::class);
 
-        $parse = new Parse(new class implements Format
-        {
+        $parse = new Parse(new class implements Format {
             public function getStringRepresentation() : string
             {
                 return '$this $is $not $valid';
