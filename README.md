@@ -18,7 +18,14 @@ composer require diwms/nginx-log-analyzer
 ## Usage
 ```php
 <?php
-$file = new \SplFileObject('access.log');
+
+declare(strict_types=1);
+
+use Diwms\NginxLogAnalyzer\Parse;
+use Diwms\NginxLogAnalyzer\NginxAccessLogFormat;
+use Diwms\NginxLogAnalyzer\RegexPattern;
+
+$file = new SplFileObject('access.log');
 $line = $file->fgets();
 
 $parse = new Parse(new NginxAccessLogFormat(), new RegexPattern());

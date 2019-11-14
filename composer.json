@@ -33,7 +33,7 @@
     },
     "scripts": {
         "psalm": "psalm",
-        "stan": "phpstan analyze src tests",
+        "stan": "phpstan analyze -l max src tests",
         "cs-fix": "phpcbf",
         "cs-check": "phpcs",
         "watch": "phpunit-watcher watch",

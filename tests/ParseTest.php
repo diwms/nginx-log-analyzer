@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Diwms\NginxLogAnalyzer\Tests;
 
+use Diwms\NginxLogAnalyzer\Contracts\Format;
+use Diwms\NginxLogAnalyzer\Exceptions\Line;
 use Diwms\NginxLogAnalyzer\NginxAccessLogFormat;
 use Diwms\NginxLogAnalyzer\Parse;
 use Diwms\NginxLogAnalyzer\RegexPattern;
@@ -36,5 +38,33 @@ class ParseTest extends TestCase
         $result = $this->parse->line($line);
 
         $this->assertInstanceOf(stdClass::class, $result);
+    }
+
+    /**
+     * @test
+     */
+    public function throwWhenParseEmptyLine() : void
+    {
+        $this->expectException(Line::class);
+
+        $this->parse->line('');
+    }
+
+    /**
+     * @test
+     */
+    public function throwWhenLineDoesNotMatchRegex() : void
+    {
+        $this->expectException(Line::class);
+
+        $parse = new Parse(new class implements Format
+        {
+            public function getStringRepresentation() : string
+            {
+                return '$this $is $not $valid';
+            }
+        }, new RegexPattern());
+
+        $parse->line('- -');
     }
 }
